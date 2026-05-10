@@ -22,3 +22,9 @@ test('A h1 eleme: Rombusz területe', async ({ page }) => {
     const text = page.locator('h1')
     await expect(text).toContainText('Rombusz területe')
 })
+
+test('A p elem tartalma: Rombusz területe az átlókból számolva.', async ({ page }) => {
+    await page.goto(url)
+    const text = page.locator('p')
+    await expect(text).toContainText('Rombusz területe az átlókból számolva.')
+})
